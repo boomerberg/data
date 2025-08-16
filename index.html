@@ -22,7 +22,7 @@
       border-left: 2px solid #000;   /* linker Strich */
       border-bottom: 2px solid #000; /* unterer Strich */
       padding: 10px 30px;
-      margin: 0 auto 30px auto;
+      margin: 0 auto 20px auto;
     }
     .logo h1 {
       margin: 0;
@@ -31,6 +31,32 @@
       text-transform: uppercase;
       text-align: center;
     }
+
+    /* Navigation Buttons im Logo-Stil */
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+    .nav-buttons a {
+      display: inline-block;
+      border-left: 2px solid #000;
+      border-bottom: 2px solid #000;
+      padding: 8px 20px;
+      font-size: 1.1em;
+      font-weight: bold;
+      text-decoration: none;
+      color: #000;
+      text-transform: uppercase;
+      transition: all 0.2s ease-in-out;
+    }
+    .nav-buttons a:hover {
+      background-color: #000;
+      color: #fff;
+    }
+
     .description {
       text-align: left;
       font-size: 1.1em;
@@ -56,6 +82,14 @@
   <div class="container">
     <div class="logo">
       <h1>BOOMERBERG</h1>
+    </div>
+
+    <!-- Neue Buttons -->
+    <div class="nav-buttons">
+      <a href="/breadth/index.html">Breadth</a>
+      <a href="/sentiment/index.html">Sentiment</a>
+      <a href="/stuff/index.html">Stuff</a>
+      <a href="/quant/index.html">Quant</a>
     </div>
 
     <div class="description">
