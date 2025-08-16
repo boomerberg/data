@@ -54,12 +54,6 @@
       background-color: #000;
       color: #fff;
     }
-    .description {
-      text-align: left;
-      font-size: 1.1em;
-      color: #333;
-      margin-bottom: 40px;
-    }
     h2 {
       font-size: 1.3em;
       margin-top: 40px;
@@ -70,6 +64,7 @@
       justify-content: space-between;
       gap: 20px;
       flex-wrap: wrap;
+      margin-bottom: 30px;
     }
     .chart-container {
       flex: 1 1 48%;
@@ -78,7 +73,6 @@
       width: 100% !important;
       border: none;
     }
-    /* responsive fallback */
     @media (max-width: 800px) {
       .chart-container {
         flex: 1 1 100%;
@@ -102,6 +96,7 @@
 
     <h2>Quo Vadis USA?</h2>
 
+    <!-- Erste Reihe -->
     <div class="charts-row">
       <div class="chart-container">
         <iframe title="Total Construction Spending" 
@@ -110,7 +105,7 @@
                 src="https://datawrapper.dwcdn.net/tSPGe/1/" 
                 scrolling="no" 
                 frameborder="0" 
-                height="501" 
+                height="500" 
                 data-external="1"></iframe>
       </div>
 
@@ -121,22 +116,36 @@
                 src="https://datawrapper.dwcdn.net/uuVYL/2/" 
                 scrolling="no" 
                 frameborder="0" 
-                height="501" 
+                height="500" 
                 data-external="1"></iframe>
       </div>
     </div>
 
-    <!-- Neues Diagramm unterhalb -->
-    <div class="chart-container" style="margin-top: 30px;">
-      <iframe title="Consumer Price Index for All Urban Consumers: All Items in U.S. City Average" 
-              aria-label="Line chart" 
-              id="datawrapper-chart-bZnoB" 
-              src="https://datawrapper.dwcdn.net/bZnoB/1/" 
-              scrolling="no" 
-              frameborder="0" 
-              style="width: 0; min-width: 100% !important; border: none;" 
-              height="501" 
-              data-external="1"></iframe>
+    <!-- Zweite Reihe -->
+    <div class="charts-row">
+      <div class="chart-container">
+        <iframe title="Consumer Price Index for All Urban Consumers: All Items in U.S. City Average" 
+                aria-label="Line chart" 
+                id="datawrapper-chart-bZnoB" 
+                src="https://datawrapper.dwcdn.net/bZnoB/1/" 
+                scrolling="no" 
+                frameborder="0" 
+                style="width: 0; min-width: 100% !important; border: none;" 
+                height="500" 
+                data-external="1"></iframe>
+      </div>
+
+      <div class="chart-container">
+        <iframe title="Nonfarm Business Sector: Labor Productivity (Output per Hour) for All Workers" 
+                aria-label="Line chart" 
+                id="datawrapper-chart-Tb0Q4" 
+                src="https://datawrapper.dwcdn.net/Tb0Q4/1/" 
+                scrolling="no" 
+                frameborder="0" 
+                style="width: 0; min-width: 100% !important; border: none;" 
+                height="500" 
+                data-external="1"></iframe>
+      </div>
     </div>
 
   </div>
