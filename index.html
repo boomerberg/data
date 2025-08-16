@@ -26,6 +26,12 @@
       padding: 15px;
       border-radius: 12px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      width: 50%;              /* nur halbe Breite */
+      min-width: 400px;        /* Mindestbreite für Lesbarkeit */
+    }
+    iframe {
+      width: 100% !important;  /* passt sich an Container an */
+      border: none;
     }
   </style>
 </head>
@@ -41,7 +47,6 @@
             src="https://datawrapper.dwcdn.net/gJjxt/1/" 
             scrolling="no" 
             frameborder="0" 
-            style="width: 0; min-width: 100% !important; border: none;" 
             height="501" 
             data-external="1"></iframe>
     <script type="text/javascript">
