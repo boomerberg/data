@@ -13,16 +13,23 @@
       line-height: 1.6;
     }
     .container {
-      max-width: 800px;
+      max-width: 700px;
       margin: 0 auto;
       padding: 40px 20px;
     }
-    h1 {
+    .logo {
+      display: inline-block;
+      border-left: 2px solid #000;   /* linker Strich */
+      border-bottom: 2px solid #000; /* unterer Strich */
+      padding: 10px 30px;
+      margin: 0 auto 30px auto;
+    }
+    .logo h1 {
+      margin: 0;
       font-weight: bold;
       font-size: 2.2em;
-      margin-bottom: 20px;
-      text-align: center;
       text-transform: uppercase;
+      text-align: center;
     }
     .description {
       text-align: center;
@@ -47,7 +54,9 @@
 <body>
 
   <div class="container">
-    <h1>BOOMERBERG</h1>
+    <div class="logo">
+      <h1>BOOMERBERG</h1>
+    </div>
 
     <div class="description">
       What matters in the market?<br>
