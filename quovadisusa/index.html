@@ -13,7 +13,7 @@
       line-height: 1.6;
     }
     .container {
-      max-width: 700px;
+      max-width: 1000px; /* erweitert, damit 2 Diagramme nebeneinander Platz haben */
       margin: 0 auto;
       padding: 20px 10px;
     }
@@ -68,8 +68,16 @@
       margin-top: 40px;
       margin-bottom: 20px;
     }
+
+    /* Neuer Flex-Container für die Diagramme */
+    .charts-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap; /* Fällt auf Mobilgeräten untereinander */
+    }
     .chart-container {
-      margin-bottom: 40px;
+      flex: 1 1 48%; /* beide ca. 48% breit */
     }
     iframe {
       width: 100% !important;
@@ -88,31 +96,34 @@
     <div class="nav-buttons">
       <a href="/breadth/index.html">Breadth</a>
       <a href="/sentiment/index.html">Sentiment</a>
-      <a href="/stuff/index.html">Stuff</a>
+      <a href="/data/quovadisusa">QuoVadisUSA</a>
       <a href="/quant/index.html">Quant</a>
     </div>
 
     <h2>Quo Vadis USA?</h2>
-    <div class="chart-container">
-      <iframe title="Total Construction Spending" 
-              aria-label="Line chart" 
-              id="datawrapper-chart-tSPGe" 
-              src="https://datawrapper.dwcdn.net/tSPGe/1/" 
-              scrolling="no" 
-              frameborder="0" 
-              height="501" 
-              data-external="1"></iframe>
-    </div>
 
-    <div class="chart-container">
-      <iframe title="Unemployment Rate in Percent" 
-              aria-label="Interactive line chart" 
-              id="datawrapper-chart-uuVYL" 
-              src="https://datawrapper.dwcdn.net/uuVYL/2/" 
-              scrolling="no" 
-              frameborder="0" 
-              height="451" 
-              data-external="1"></iframe>
+    <div class="charts-row">
+      <div class="chart-container">
+        <iframe title="Total Construction Spending" 
+                aria-label="Line chart" 
+                id="datawrapper-chart-tSPGe" 
+                src="https://datawrapper.dwcdn.net/tSPGe/1/" 
+                scrolling="no" 
+                frameborder="0" 
+                height="501" 
+                data-external="1"></iframe>
+      </div>
+
+      <div class="chart-container">
+        <iframe title="Unemployment Rate in Percent" 
+                aria-label="Interactive line chart" 
+                id="datawrapper-chart-uuVYL" 
+                src="https://datawrapper.dwcdn.net/uuVYL/2/" 
+                scrolling="no" 
+                frameborder="0" 
+                height="451" 
+                data-external="1"></iframe>
+      </div>
     </div>
   </div>
 
