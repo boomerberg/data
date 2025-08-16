@@ -15,7 +15,7 @@
       font-size: 2em;
       margin-bottom: 10px;
       text-align: center;
-      text-transform: uppercase; /* sorgt für BOOMERBERG */
+      text-transform: uppercase;
     }
     .description {
       text-align: center;
@@ -30,13 +30,18 @@
       font-size: 1.4em;
       color: #444;
     }
-    .chart-container {
+    .charts {
+      display: flex;
+      gap: 40px;          /* Abstand zwischen den Charts */
+      align-items: flex-start;
       margin-top: 15px;
-      width: 50%;              /* halbe Breite */
-      min-width: 400px;        /* Mindestbreite */
+    }
+    .chart-container {
+      width: 50%;
+      min-width: 400px;
     }
     iframe {
-      width: 100% !important;  /* passt sich an Container an */
+      width: 100% !important;
       border: none;
     }
   </style>
@@ -50,32 +55,48 @@
   </div>
 
   <h2>Breadth-Daten:</h2>
-  <div class="chart-container">
-    <iframe title="T2108 - % of Stocks Above 40 Day MA (NYSE)" 
-            aria-label="Line chart" 
-            id="datawrapper-chart-gJjxt" 
-            src="https://datawrapper.dwcdn.net/gJjxt/1/" 
-            scrolling="no" 
-            frameborder="0" 
-            height="501" 
-            data-external="1"></iframe>
-    <script type="text/javascript">
-      !function() {
-        "use strict";
-        window.addEventListener("message", function(a) {
-          if (void 0 !== a.data["datawrapper-height"]) {
-            var e = document.querySelectorAll("iframe");
-            for (var t in a.data["datawrapper-height"])
-              for (var r, i = 0; r = e[i]; i++)
-                if (r.contentWindow === a.source) {
-                  var d = a.data["datawrapper-height"][t] + "px";
-                  r.style.height = d;
-                }
-          }
-        })
-      }();
-    </script>
+  <div class="charts">
+    <!-- Linkes Chart -->
+    <div class="chart-container">
+      <iframe title="T2108 - % of Stocks Above 40 Day MA (NYSE)" 
+              aria-label="Line chart" 
+              id="datawrapper-chart-gJjxt" 
+              src="https://datawrapper.dwcdn.net/gJjxt/1/" 
+              scrolling="no" 
+              frameborder="0" 
+              height="501" 
+              data-external="1"></iframe>
+    </div>
+
+    <!-- Rechtes Chart -->
+    <div class="chart-container">
+      <iframe title="Luxury Watch Outperformance Comes to an End" 
+              aria-label="Interactive line chart" 
+              id="datawrapper-chart-g3HiS" 
+              src="https://datawrapper.dwcdn.net/g3HiS/2/" 
+              scrolling="no" 
+              frameborder="0" 
+              height="501" 
+              data-external="1"></iframe>
+    </div>
   </div>
+
+  <script type="text/javascript">
+    !function() {
+      "use strict";
+      window.addEventListener("message", function(a) {
+        if (void 0 !== a.data["datawrapper-height"]) {
+          var e = document.querySelectorAll("iframe");
+          for (var t in a.data["datawrapper-height"])
+            for (var r, i = 0; r = e[i]; i++)
+              if (r.contentWindow === a.source) {
+                var d = a.data["datawrapper-height"][t] + "px";
+                r.style.height = d;
+              }
+        }
+      })
+    }();
+  </script>
 
 </body>
 </html>
